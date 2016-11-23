@@ -10,7 +10,7 @@ COPY files/start.sh /start.sh
 
 RUN wget https://download.nextcloud.com/server/releases/nextcloud-10.0.1.tar.bz2 &&\
     bunzip2 nextcloud-10.0.1.tar.bz2 &&\
-    tar xf onextcloud-10.0.1.tar &&\
+    tar xf nextcloud-10.0.1.tar &&\
     rm nextcloud-10.0.1.tar &&\
     mv nextcloud web &&\
     chown -R nginx:www-data /web &&\

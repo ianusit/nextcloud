@@ -9,10 +9,10 @@ RUN apk add --update ca-certificates nginx php5 php5-gettext php5-fpm php5-ctype
 COPY files/etc/php /etc/php5
 COPY files/start.sh /start.sh
 
-RUN wget https://download.nextcloud.com/server/releases/nextcloud-11.0.0.tar.bz2 &&\
-    bunzip2 nextcloud-11.0.0.tar.bz2 &&\
-    tar xf nextcloud-11.0.0.tar &&\
-    rm nextcloud-11.0.0.tar &&\
+RUN wget https://download.nextcloud.com/server/releases/nextcloud-11.0.1.tar.bz2 &&\
+    bunzip2 nextcloud-11.0.1.tar.bz2 &&\
+    tar xf nextcloud-11.0.1.tar &&\
+    rm nextcloud-11.0.1.tar &&\
     mv nextcloud web &&\
     chown -R nginx:www-data /web &&\
     chown -R nginx /var/lib/nginx &&\
